@@ -1,7 +1,9 @@
-.PHONY = build clean
+.PHONY = all build clean
 
 CONTAINER = lynxtp/openjdk-jdk
 VERSION = 8
+
+all: build
 
 .built: Dockerfile
 	@docker build --pull -t $(CONTAINER):$(VERSION) .
