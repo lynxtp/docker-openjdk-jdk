@@ -5,7 +5,7 @@ VERSION = 8
 
 all: build
 
-.built: Dockerfile
+.built: Makefile Dockerfile
 	@docker build --pull -t $(CONTAINER):$(VERSION) .
 	@touch $@
 
